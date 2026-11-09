@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data
+data/raw/*
+data/processed/*
+data/features/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/features/.gitkeep
+# Permite versionar os "recibos" do DVC (.dvc) mesmo com os dados ignorados
+!data/raw/*.dvc
+!data/processed/*.dvc
+!data/features/*.dvc
+
+# Models
+models/*.pkl
+models/*.h5
+models/*.pt
+!models/.gitkeep
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# DVC
+.dvc/cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+
+# Reports
+*.html
+!docs/*.html
