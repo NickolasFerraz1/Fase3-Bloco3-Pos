@@ -10,7 +10,7 @@ EXPECTED_SCHEMA = {
     "sepal_width": "float64",
     "petal_length": "float64",
     "petal_width": "float64",
-    "target": "int64",
+    "target": "int32",
 }
 
 
