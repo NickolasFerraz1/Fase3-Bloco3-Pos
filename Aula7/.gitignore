@@ -10,6 +10,8 @@ mlruns/
 
 # Models
 models/*.pkl
+models/*.json
+models/archive/
 !models/.gitkeep
 
 # Data
