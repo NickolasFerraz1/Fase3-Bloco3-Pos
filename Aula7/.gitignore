@@ -28,3 +28,7 @@ logs/
 
 # OS
 .DS_Store
+
+# Gerados no hands-on 7.3 (copias; a fonte e src/retrain e data/drift_report.example.json)
+dags/retrain/
+data/drift_report.json
