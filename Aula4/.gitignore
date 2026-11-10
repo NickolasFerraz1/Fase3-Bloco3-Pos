@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+ENV/
+.pytest_cache/
+
+# Models / artefatos gerados
+models/*.pkl
+!models/.gitkeep
+
+# Dados gerados (batch input/output)
+data/*
+!data/.gitkeep
+
+# MLflow
+mlruns/
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Flask
+instance/

@@ -1,0 +1,27 @@
+# Configuração do PyLint - Aula 06 (Vídeo 6.3)
+# Doc: https://pylint.readthedocs.io/en/stable/user_guide/configuration/
+
+[MAIN]
+# Permite reconhecer membros gerados dinamicamente por estas libs sem warning.
+extension-pkg-whitelist=numpy
+ignore=archive
+
+[MESSAGES CONTROL]
+# Desabilita avisos pouco úteis no contexto didático.
+disable=
+    missing-module-docstring,
+    too-few-public-methods
+
+[DESIGN]
+# Limites usados na demonstração de complexidade.
+max-args=6
+max-locals=15
+max-branches=12
+max-statements=50
+
+[FORMAT]
+max-line-length=100
+
+[REPORTS]
+# Mostra a nota final (score) ao rodar.
+score=yes

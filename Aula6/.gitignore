@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.Python
+venv/
+.venv/
+
+# MLflow
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Profiling
+*.prof
+*.pstats
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data
+data/*.csv
+!data/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store

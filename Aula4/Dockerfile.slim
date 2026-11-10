@@ -1,0 +1,29 @@
+# Multi-stage build — imagem final menor.
+
+# Stage 1: Builder
+FROM python:3.9-slim AS builder
+
+WORKDIR /build
+COPY requirements.txt .
+RUN pip install --no-cache-dir --user -r requirements.txt
+
+# Stage 2: Runtime (sem ferramentas de build)
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copia só as deps instaladas no builder
+COPY --from=builder /root/.local /root/.local
+ENV PATH=/root/.local/bin:$PATH
+
+# Código
+COPY src/ ./src/
+
+# Treina o modelo na própria imagem (versões de runtime idênticas)
+RUN python src/train.py
+
+EXPOSE 5001
+ENV PYTHONPATH=/app/src
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "src/api/app.py"]
