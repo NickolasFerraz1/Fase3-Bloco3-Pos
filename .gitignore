@@ -9,6 +9,7 @@ env/
 .coverage
 htmlcov/
 .ruff_cache/
+*env
 
 # Jupyter
 .ipynb_checkpoints/
